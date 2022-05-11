@@ -3,8 +3,6 @@ import useCategories from "./customHook/useCategories";
 import ReactModal from "./reactModal/ReactModal";
 import "./styles/categories.css";
 import ModalCategory from "./reactModal/ModalCategory";
-import SvgFemale from "../svg/SvgFemale";
-import SvgMale from "../svg/SvgMale";
 import ModalProducts from "../categories/reactModal/ModalProducts";
 
 function Categories() {

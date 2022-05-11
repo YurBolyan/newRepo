@@ -1,8 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
 import { MdOutlinePhotoCameraBack } from "react-icons/md";
-import SvgMaleModal from "../../svg/SvgMaleModal";
-import SvgFemaleModal from "../../svg/SvgFemaleModal";
 import modalgic from "../../pichtures/modalgic.svg";
 import "./reactModal.css";
 

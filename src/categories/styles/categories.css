@@ -1,0 +1,120 @@
+.femaleItems {
+    width: 140px;
+    height: 108px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    margin-left: 38px;
+    cursor: pointer;
+}
+
+.femaleItems.activeZard {
+    border: 2px solid black;
+}
+
+.typeItems {
+    border-bottom: 2px solid grey;
+    transition: border-bottom-color .5s ease;
+}
+
+.typeItems.activeType {
+    border-bottom-color: blue;
+}
+
+.wrappercategory{
+    display: flex; 
+    padding-top: 29px;  
+}
+
+.humansIcons {
+    padding-top: 60px;
+    color:darkgray;
+    border-radius: 0px;
+    
+}
+
+.humansIcons div{
+    border-radius: 20px;
+    background-color:white;
+}
+
+.zardCategory div {
+    cursor: pointer;
+}
+
+.zardCategory{ 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #4F4F4F;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 4px ;
+}
+
+.products {
+    display: flex;
+    padding: 50px;
+    height: 170px;
+    border-radius: 5px;
+    padding: 113px;
+}
+
+.addProductButton {
+    width: 150px;
+    height: 162px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.productImage {
+    width: 157px;
+    height: 162px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.activeZardButton {
+    width: 50px;
+    height: 108px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.avtiveTypesButton {
+    width: 50px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 11px;
+}
+
+.productImage div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productImage img {
+    width: 147px;
+    height: 118px;
+    border-radius: 5px 5px 0px 0px;
+    padding: 5px;
+}
+
+.svgIcons {
+    cursor: pointer;
+}

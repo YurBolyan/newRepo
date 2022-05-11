@@ -1,0 +1,41 @@
+.zardAddButton {
+    position: absolute;
+    width: 292px;
+    height: 32px;
+    cursor: pointer;
+    background: #0008C1;
+    border-radius: 25px;
+}
+.categoryModalName{
+    height: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #2E2E2E;
+}
+
+.gendersInModal {
+    display: flex;
+    padding-left: 76px;
+    cursor: pointer;
+}
+
+.iconUpload{
+    position: absolute;
+    top: 211px;
+    left: 134px;
+}
+
+h2 {
+    height: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #2E2E2E;
+}

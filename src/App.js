@@ -1,5 +1,5 @@
 import './App.css';
-import Categories from './categories/Categories';
+import Categories from "./categories/Categories"
 
 function App() {
   return (

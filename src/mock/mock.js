@@ -61,7 +61,7 @@ export const gender = {
         },
         {
           id: "1",
-          name: "Unmanaged Switch",
+          name: "Unmanaged Switc8888h",
           pichtures: unmanagedSwitch,
           types: [
               {   

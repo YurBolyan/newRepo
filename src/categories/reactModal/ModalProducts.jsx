@@ -7,9 +7,9 @@ import "../reactModal/reactModal.css";
 function ModalProducts({
   closeModalProducts,
   productModalOpen,
-  activeGender,
+  activeSarq,
   activeType,
-  activeZard,
+  activeProduct,
   data,
 }) {
   const [photoProductModal, setPhotoProductModal] = useState("");
@@ -52,8 +52,8 @@ function ModalProducts({
     name &&
       price &&
       photoProductModal &&
-      prevData[activeGender]
-        .find((zard) => zard.id === activeZard)
+      prevData[activeSarq]
+        .find((sarq) => sarq.id === activeProduct)
         .types.find((type) => type.id === activeType)
         .items.push(newProduct);
     setPhotoProductModal("");

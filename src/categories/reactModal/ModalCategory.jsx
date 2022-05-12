@@ -8,7 +8,7 @@ function ModalCategory({
   closeModal1,
   modalIsOpen1,
   addNewType,
-  zardObj,
+  deviceObj,
 }) {
   const customStyles = {
     content: {
@@ -39,7 +39,7 @@ function ModalCategory({
       >
         <div>
           <div className="categoryModalName">
-            {zardObj?.name}: Добавить цвет {" "}
+            {deviceObj?.name}: Добавить цвет {" "}
             <button style={{ marginLeft: "60px"}} onClick={closeModal1}>
               X
             </button>

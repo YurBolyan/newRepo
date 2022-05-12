@@ -3,11 +3,11 @@ import { gender } from "../../mock/mock";
 
 
 function useCategories(activeZard) {
-  const [activeGender, setActiveGender] = useState("female");
+  const [activeSarq, setActiveSarq] = useState("female");
   const [modalIsOpen, setIsOpen] = useState(false);
   const [image, setImage] = useState("");
   const [data, setData] = useState(gender);
-  const [humansGender, setHumansGender] = useState(0);
+  const [modalDevice, setModalDevice] = useState(0);
   const [name1,setName1] = useState('')
   const [name, setName] = useState("");
 
@@ -30,7 +30,7 @@ function useCategories(activeZard) {
   const addNewCategory = () => {
     setData((prev) => {
       const temp = { ...prev };
-    name && image && temp[humansGender ? "male" : "female"].push({
+    name && image && temp[modalDevice ? "male" : "female"].push({
         pichtures: image,
         name,
         id:Math.random() * 100000,
@@ -50,7 +50,7 @@ function useCategories(activeZard) {
       name: name1,
       items: []
     };
-    prevData[activeGender].find(zard => zard.id === activeZard).types.push(newData);
+    prevData[activeSarq].find(sarq => sarq.id === activeZard).types.push(newData);
     setData(prevData);
   };
 
@@ -64,13 +64,13 @@ function useCategories(activeZard) {
     data,
     closeModal,
     image,
-    activeGender,
-    setActiveGender,
-    setHumansGender,
+    activeSarq,
+    setActiveSarq,
+    setModalDevice,
     setName1,
     addNewType,
     name1,
-    humansGender
+    modalDevice
   };
 }
 

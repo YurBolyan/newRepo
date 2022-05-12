@@ -6,9 +6,9 @@ import ModalCategory from "./reactModal/ModalCategory";
 import ModalProducts from "../categories/reactModal/ModalProducts";
 
 function Categories() {
-  const [activeZard, setActiveZard] = useState();
+  const [activeProduct, setActiveProduct] = useState();
   const [activeType, setActiveType] = useState();
-  const [zarder, setZarder] = useState([]);
+  const [device, setDevice] = useState([]);
   const [types, setTypes] = useState([]);
   const [items, setItems] = useState([]);
   const [modalIsOpen1, setIsOpen1] = useState(false);
@@ -36,27 +36,27 @@ function Categories() {
     data,
     closeModal,
     image,
-    activeGender,
-    setActiveGender,
-    setHumansGender,
+    activeSarq,
+    setActiveSarq,
+    setModalDevice,
     addNewType,
     setName1,
-    humansGender,
-  } = useCategories(activeZard);
+    modalDevice,
+  } = useCategories(activeProduct);
 
   useEffect(() => {
-    setActiveZard(undefined);
-    const result = data[activeGender];
-    setZarder(result);
-  }, [activeGender, data]);
+    setActiveProduct(undefined);
+    const result = data[activeSarq];
+    setDevice(result);
+  }, [activeSarq, data]);
 
   useEffect(() => {
     setActiveType(undefined);
-    if (activeZard) {
-      const result = zarder.find((zard) => zard.id === activeZard).types;
+    if (activeProduct) {
+      const result = device.find((sarq) => sarq.id === activeProduct).types;
       setTypes(result);
     }
-  }, [activeZard, zarder]);
+  }, [activeProduct, device]);
 
   useEffect(() => {
     if (activeType) {
@@ -71,36 +71,36 @@ function Categories() {
         <div>
           <div className="svgIcons">
             <div>
-              <div onClick={() => setActiveGender("male")}>
-                <p style={{background: activeGender === "male"? "#939393" : "white" }}>Router</p>
+              <div onClick={() => setActiveSarq("male")}>
+                <p style={{background: activeSarq === "male"? "blue" : "#939393", borderRadius: "6px" }}>Router</p>
               </div>
             </div>
             <div>
               <div
-                onClick={() => setActiveGender("female")}
+                onClick={() => setActiveSarq("female")}
               >
-                <p style={{background: activeGender === "male"? "white" : "#939393" }}>Switch</p>
+                <p style={{background: activeSarq === "male"? "#939393" : "blue", borderRadius: "6px" }}>Switch</p>
               </div>
             </div>
           </div>
         </div>
-        {zarder.map((zard) => (
+        {device.map((sarq) => (
           <div
             className={`femaleItems ${
-              activeZard === zard.id ? "activeZard" : ""
+              activeProduct === sarq.id ? "activeZard" : ""
             }`}
-            key={zard.id}
-            onClick={() => setActiveZard(zard.id)}
+            key={sarq.id}
+            onClick={() => setActiveProduct(sarq.id)}
           >
-            <img alt="" width="137px" height="60px" src={zard.pichtures} />
-            <p>{zard.name}</p>
+            <img alt="" width="137px" height="60px" src={sarq.pichtures} />
+            <p>{sarq.name}</p>
           </div>
         ))}
         <button className="activeZardButton" onClick={openModal}>
           +
         </button>
       </div>
-      {activeZard && (
+      {activeProduct && (
         <div className="zardCategory">
           {types.map((type) => (
             <div
@@ -119,12 +119,12 @@ function Categories() {
         </div>
       )}
 
-      {activeZard && activeType && (
+      {activeProduct && activeType && (
         <div className="products">
           {items.map((item) => {
             return (
               <div>
-                <div style={{cursor: "pointer"}} className="productImage">
+                <div className="productImage">
                   <img alt="" src={item.pichtures} />
                   <div >
                     <div>{item.name}</div>
@@ -144,8 +144,8 @@ function Categories() {
         productModalOpen={productModalOpen}
         closeModalProducts={closeModalProducts}
         data={data}
-        activeGender={activeGender}
-        activeZard={activeZard}
+        activeSarq={activeSarq}
+        activeProduct={activeProduct}
         activeType={activeType}
       />
       <ModalCategory
@@ -153,7 +153,7 @@ function Categories() {
         closeModal1={closeModal1}
         addNewType={addNewType}
         setName1={setName1}
-        zardObj={zarder?.find((zard) => zard.id === activeZard)}
+        deviceObj={device?.find((sarq) => sarq.id === activeProduct)}
       />
       <div>
         <ReactModal
@@ -163,8 +163,8 @@ function Categories() {
           addNewCategory={addNewCategory}
           closeModal={closeModal}
           image={image}
-          setHumansGender={setHumansGender}
-          humansGender={humansGender}
+          setModalDevice={setModalDevice}
+          modalDevice={modalDevice}
         />
       </div>
     </div>

@@ -25,8 +25,8 @@ function ReactModal({
   handleUploadFile,
   addNewCategory,
   image,
-  setHumansGender,
-  humansGender,
+  setModalDevice,
+  modalDevice,
 }) {
   return (
     <div>
@@ -40,11 +40,11 @@ function ReactModal({
         <button onClick={closeModal}>X</button>
         <h2>Добавить устройство</h2>
         <div className="gendersInModal">
-          <div style={{paddingRight: "15px"}} onClick={() => setHumansGender(1)}>
-          <p style={{background: humansGender === 1? "#939393" : "white",marginTop: "26px" }}>Router</p>
+          <div style={{paddingRight: "15px"}} onClick={() => setModalDevice(1)}>
+          <p style={{background: modalDevice === 1? "blue" : "#939393",marginTop: "26px",borderRadius: "6px" }}>Router</p>
           </div>
-          <div style={{paddingTop: "10px"}} onClick={() => setHumansGender(0)}>
-          <p style={{background: humansGender === 1? "white" : "#939393" }}>Switch</p>
+          <div style={{paddingTop: "10px"}} onClick={() => setModalDevice(0)}>
+          <p style={{background: modalDevice === 1? "#939393" : "blue",borderRadius: "6px" }}>Switch</p>
           </div>
         </div>
         <div>
